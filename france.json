@@ -1,0 +1,344 @@
+[
+    {
+        "iata": "MFX",
+        "name": "Meribel Airport",
+        "city": "Ajaccio",
+        "country": "FR"
+    },
+    {
+        "iata": "XAV",
+        "name": "Albertville Airport",
+        "city": "Angers",
+        "country": "FR"
+    },
+    {
+        "iata": "XMK",
+        "name": "Montelimar - Ancone Airport",
+        "city": "Annecy",
+        "country": "FR"
+    },
+    {
+        "iata": "QNJ",
+        "name": "Annemasse Airport",
+        "city": "Annemasse",
+        "country": "FR"
+    },
+    {
+        "iata": "AUR",
+        "name": "Aurillac Airport",
+        "city": "Aurillac",
+        "country": "FR"
+    },
+    {
+        "iata": "GAT",
+        "name": "Gap - Tallard Airport",
+        "city": "Avignon",
+        "country": "FR"
+    },
+    {
+        "iata": "BOR",
+        "name": "Fontaine Airport",
+        "city": "Belfort",
+        "country": "FR"
+    },
+    {
+        "iata": "XCX",
+        "name": "Chatellerault Airport",
+        "city": "Biarritz",
+        "country": "FR"
+    },
+    {
+        "iata": "QTJ",
+        "name": "Chartres Champhol Airport",
+        "city": "Blois",
+        "country": "FR"
+    },
+    {
+        "iata": "AHZ",
+        "name": "L'alpe D'huez Airport",
+        "city": "Bourg",
+        "country": "FR"
+    },
+    {
+        "iata": "BOU",
+        "name": "Bourges Airport",
+        "city": "Bourges",
+        "country": "FR"
+    },
+    {
+        "iata": "BVE",
+        "name": "Brive-La Roche Airport",
+        "city": "Brive-la-Gaillarde",
+        "country": "FR"
+    },
+    {
+        "iata": "XGT",
+        "name": "Gueret St Laurent Airport",
+        "city": "Cahors",
+        "country": "FR"
+    },
+    {
+        "iata": "XCZ",
+        "name": "Charleville-Mezieres Airport",
+        "city": "Charleville-Mezieres",
+        "country": "FR"
+    },
+    {
+        "iata": "XCP",
+        "name": "Compiegne Margny Airport",
+        "city": "Compiegne",
+        "country": "FR"
+    },
+    {
+        "iata": "CVF",
+        "name": "Courchevel Airport",
+        "city": "Courcheval",
+        "country": "FR"
+    },
+    {
+        "iata": "CSF",
+        "name": "Creil Air Base",
+        "city": "Creil",
+        "country": "FR"
+    },
+    {
+        "iata": "DOL",
+        "name": "Deauville-Saint-Gatien Airport",
+        "city": "Deauville",
+        "country": "FR"
+    },
+    {
+        "iata": "DPE",
+        "name": "St Aubin Airport",
+        "city": "Dieppe",
+        "country": "FR"
+    },
+    {
+        "iata": "XAN",
+        "name": "Alencon Valframbert Airport",
+        "city": "Evreux",
+        "country": "FR"
+    },
+    {
+        "iata": "FSC",
+        "name": "Figari Sud-Corse Airport",
+        "city": "Figari Sud-Corse",
+        "country": "FR"
+    },
+    {
+        "iata": "GFR",
+        "name": "Granville Airport",
+        "city": "Granville",
+        "country": "FR"
+    },
+    {
+        "iata": "IDY",
+        "name": "Ile d'Yeu Airport",
+        "city": "Ile d'Yeu",
+        "country": "FR"
+    },
+    {
+        "iata": "LBY",
+        "name": "La Baule-Escoublac Airport",
+        "city": "La Baule-Escoublac",
+        "country": "FR"
+    },
+    {
+        "iata": "LTT",
+        "name": "La Mole Airport",
+        "city": "La Mole",
+        "country": "FR"
+    },
+    {
+        "iata": "LDV",
+        "name": "Landivisiau Air Base",
+        "city": "Landivisiau",
+        "country": "FR"
+    },
+    {
+        "iata": "LAI",
+        "name": "Lannion-Cote de Granit Airport",
+        "city": "Lannion",
+        "country": "FR"
+    },
+    {
+        "iata": "XLN",
+        "name": "Laon - Chambry Airport",
+        "city": "Laon-Chambry",
+        "country": "FR"
+    },
+    {
+        "iata": "CTT",
+        "name": "Le Castellet Airport",
+        "city": "Le Castellet",
+        "country": "FR"
+    },
+    {
+        "iata": "BAE",
+        "name": "Barcelonnette - Saint-Pons Airport",
+        "city": "Le Castellet",
+        "country": "FR"
+    },
+    {
+        "iata": "LTQ",
+        "name": "Le Touquet-Cote d'Opale Airport",
+        "city": "Le Touquet-Paris-Plage",
+        "country": "FR"
+    },
+    {
+        "iata": "XDK",
+        "name": "Dunkerque Les Moeres Airport",
+        "city": "Les Moeres",
+        "country": "FR"
+    },
+    {
+        "iata": "LSO",
+        "name": "Les Sables-d'Olonne Talmont Airport",
+        "city": "Les Sables-d'Olonne",
+        "country": "FR"
+    },
+    {
+        "iata": "VTL",
+        "name": "Vittel Champ De Course Airport",
+        "city": "Luxeuil",
+        "country": "FR"
+    },
+    {
+        "iata": "LYS",
+        "name": "Lyon Saint-Exupery Airport",
+        "city": "Lyon",
+        "country": "FR"
+    },
+    {
+        "iata": "CQF",
+        "name": "Calais-Dunkerque Airport",
+        "city": "Marck",
+        "country": "FR"
+    },
+    {
+        "iata": "MRS",
+        "name": "Marseille Provence Airport",
+        "city": "Marseille",
+        "country": "FR"
+    },
+    {
+        "iata": "SCP",
+        "name": "Mont-Dauphin - St-Crepin Airport",
+        "city": "Mende",
+        "country": "FR"
+    },
+    {
+        "iata": "XMJ",
+        "name": "Mont-de-Marsan (BA 118) Air Base",
+        "city": "Mont-de-Marsan",
+        "country": "FR"
+    },
+    {
+        "iata": "XMW",
+        "name": "Montauban Airport",
+        "city": "Montauban",
+        "country": "FR"
+    },
+    {
+        "iata": "NTE",
+        "name": "Nantes Atlantique Airport",
+        "city": "Nantes",
+        "country": "FR"
+    },
+    {
+        "iata": "NCE",
+        "name": "Nice-Cote d'Azur Airport",
+        "city": "Nice",
+        "country": "FR"
+    },
+    {
+        "iata": "LBG",
+        "name": "Paris-Le Bourget Airport",
+        "city": "Paris",
+        "country": "FR"
+    },
+    {
+        "iata": "CDG",
+        "name": "Charles de Gaulle International Airport",
+        "city": "Paris",
+        "country": "FR"
+    },
+    {
+        "iata": "ORY",
+        "name": "Paris-Orly Airport",
+        "city": "Paris",
+        "country": "FR"
+    },
+    {
+        "iata": "XDA",
+        "name": "Dax Seyresse Airport",
+        "city": "Perigueux",
+        "country": "FR"
+    },
+    {
+        "iata": "POX",
+        "name": "Pontoise - Cormeilles-en-Vexin Airport",
+        "city": "Pontoise",
+        "country": "FR"
+    },
+    {
+        "iata": "PRP",
+        "name": "Propriano Airport",
+        "city": "Propriano",
+        "country": "FR"
+    },
+    {
+        "iata": "XSL",
+        "name": "Sarlat Domme Airport",
+        "city": "Rochefort",
+        "country": "FR"
+    },
+    {
+        "iata": "XTB",
+        "name": "Tarbes Laloubere Airport",
+        "city": "Rochefort",
+        "country": "FR"
+    },
+    {
+        "iata": "EBU",
+        "name": "Saint-Etienne-Boutheon Airport",
+        "city": "Saint-Etienne/Boutheon",
+        "country": "FR"
+    },
+    {
+        "iata": "SYT",
+        "name": "Saint-Yan Airport",
+        "city": "Saint-Yan",
+        "country": "FR"
+    },
+    {
+        "iata": "SOZ",
+        "name": "Solenzara (BA 126) Air Base",
+        "city": "Solenzara",
+        "country": "FR"
+    },
+    {
+        "iata": "QBQ",
+        "name": "Besancon Thise Airport",
+        "city": "St Nazaire",
+        "country": "FR"
+    },
+    {
+        "iata": "SXB",
+        "name": "Strasbourg Airport",
+        "city": "Strasbourg",
+        "country": "FR"
+    },
+    {
+        "iata": "TNF",
+        "name": "Toussus-le-Noble Airport",
+        "city": "Toussus-le-Noble",
+        "country": "FR"
+    },
+    {
+        "iata": "MVV",
+        "name": "Megeve Airport",
+        "city": "Verdun",
+        "country": "FR"
+    }
+]

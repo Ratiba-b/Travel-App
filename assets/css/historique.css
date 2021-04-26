@@ -1,0 +1,26 @@
+body {
+  background: rgba(198, 238, 232, 0.185);
+}
+
+.jumbotron {
+  width: 85%;
+  box-shadow: 10px 10px 30px rgb(173, 173, 173);
+  background: white;
+  margin: 0 auto;
+}
+footer {
+  bottom: 0;
+  position: fixed;
+  background: rgba(222, 224, 224, 0.753);
+  box-shadow: 5px 5px 10px rgb(173, 173, 173);
+}
+.bottom {
+  background: rgba(198, 201, 201, 0.534);
+  box-shadow: 20px 20px 40px rgb(173, 173, 173);
+}
+
+@media (min-width: 320px) {
+  table {
+    word-break: break-all;
+  }
+}

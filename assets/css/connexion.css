@@ -1,0 +1,32 @@
+body {
+  background: rgba(198, 238, 232, 0.185);
+}
+
+.card {
+  background: white;
+  margin-bottom: 5em;
+  margin-top: 3em;
+  box-shadow: 10px 10px 30px rgb(173, 173, 173);
+  margin-top: 40%;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  background: rgba(222, 224, 224, 0.753);
+  box-shadow: 5px 5px 10px rgb(173, 173, 173);
+}
+.bottom {
+  background: rgba(198, 201, 201, 0.534);
+  box-shadow: 20px 20px 40px rgb(173, 173, 173);
+}
+
+@media (min-width: 320px) {
+  footer {
+    bottom: 0;
+    position: fixed;
+  }
+  .row {
+    margin-bottom: 8em;
+  }
+}

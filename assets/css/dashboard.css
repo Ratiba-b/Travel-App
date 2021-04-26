@@ -1,0 +1,51 @@
+body {
+  background: rgba(198, 238, 232, 0.185);
+}
+
+.jumbotron {
+  width: 60%;
+  box-shadow: 10px 10px 30px rgb(173, 173, 173);
+  background: white;
+
+  margin-top: 6em;
+  margin-bottom: 10em;
+}
+
+footer {
+  margin-top: 6em;
+}
+
+.card {
+  box-shadow: 10px 10px 30px rgb(173, 173, 173);
+  background: white;
+  padding-bottom: 2em;
+}
+
+.button {
+  width: 100%;
+}
+
+footer {
+  bottom: 0;
+
+  background: rgba(222, 224, 224, 0.753);
+  box-shadow: 5px 5px 10px rgb(173, 173, 173);
+}
+.bottom {
+  background: rgba(198, 201, 201, 0.534);
+  box-shadow: 20px 20px 40px rgb(173, 173, 173);
+}
+
+@media (max-width: 320px) {
+  footer {
+    position: none;
+    bottom: 0;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  footer {
+    position: none;
+    bottom: 0;
+  }
+}

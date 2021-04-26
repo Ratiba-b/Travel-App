@@ -1,0 +1,47 @@
+body {
+  background: rgba(198, 238, 232, 0.185);
+}
+
+.jumbotron {
+  width: 70%;
+  box-shadow: 10px 10px 30px rgb(173, 173, 173);
+  background: white;
+  margin-top: 5em;
+  padding-bottom: 5em;
+}
+
+.card {
+  padding-bottom: 2em;
+}
+footer {
+  margin-top: 6em;
+}
+
+.container {
+  background: white;
+  border-radius: 10px;
+  margin-top: 5em;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  box-shadow: 10px 10px 30px rgb(173, 173, 173);
+}
+legend {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+button {
+  margin-top: 2em;
+}
+
+footer {
+  margin-top: 5em;
+  bottom: 0;
+
+  background: rgba(222, 224, 224, 0.753);
+  box-shadow: 5px 5px 10px rgb(173, 173, 173);
+}
+.bottom {
+  background: rgba(198, 201, 201, 0.534);
+  box-shadow: 20px 20px 40px rgb(173, 173, 173);
+}

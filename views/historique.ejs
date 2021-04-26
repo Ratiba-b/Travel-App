@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/minty/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/historique.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">Travel-App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./dashboard"
+                >Accueil
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./recherches">Vols</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./historique">Historique</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./todo">To-do list</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <h1 class="text-center my-5 pt-5">HISTORIQUE</h1>
+
+    <div class="jumbotron">
+      <div class="container">
+        <table class="table table-striped">
+          <tr>
+            <th>Depart</th>
+            <th>Date de départ</th>
+            <th>Arrivée</th>
+            <th>Date d'arrivée</th>
+            <th>Prix</th>
+            <th>Vol</th>
+            <th>Compagnie</th>
+            <th>Supprimer</th>
+          </tr>
+          <% for(let i=0; i < vols.length; i++) { %>
+          <tr>
+            <td><%= vols[i].departure %></td>
+            <td><%= vols[i].departureDate.toLocaleString("fr-FR") %></td>
+            <td><%= vols[i].arrival %></td>
+
+            <td><%= vols[i].arrivalDate.toLocaleString("fr-FR") %></td>
+            <td><%= vols[i].finalPrice %><%= vols[i].currency %></td>
+
+            <td><%= vols[i].aircraft %></td>
+            <td><%= vols[i].carrier %></td>
+            <td>
+              <button
+                class="btn-delete-vol btn btn-danger btn-sm mx-5"
+                id="delete-button"
+                vol-id="<%= vols[i]._id %>"
+              >
+                Supprimer
+              </button>
+            </td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+    </div>
+    <footer class="w-100">
+      <div class="text-center bottom p-3">
+        <a class="text-white" href="https://gitlab.com/tiba.benzer"
+          ><p><strong>© 2021 Copyright : RATIBA BENZEROUALI</strong></p></a
+        >
+      </div>
+    </footer>
+    <script type="text/javascript" src="../static/delete.js"></script>
+  </body>
+</html>

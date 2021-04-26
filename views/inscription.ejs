@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/minty/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/inscription.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <table class="table table-hover">
+        <tr class="table-secondary">
+          <th scope="row">TRAVEL-APP</th>
+        </tr>
+      </table>
+    </header>
+    <div class="container-fluid">
+      <fieldset>
+        <legend>Page d'inscription</legend>
+        <div class="row mt-5">
+          <div class="col-md-4 m-auto">
+            <div class="card card-body">
+              <h1 class="text-center mb-3">
+                <i class="fas fa-user-plus"></i>
+              </h1>
+              <%- include('./partials/messages') %>
+              <form action="/users/inscription" method="POST">
+                <div class="form-group">
+                  <label for="name">Prénom</label>
+                  <input
+                    type="name"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    placeholder="Enter Name"
+                    value="<%= typeof name != 'undefined' ? name : '' %>"
+                  />
+                  <!-- si le contenu n'est pas différent de undifined alors je veux qd mm recup ce qui a dans la variable, du moment que ce n'est pas undifined alors on recup la valeur-->
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Enter Email"
+                    value="<%= typeof email != 'undefined' ? email : '' %>"
+                  />
+                  <!-- si il y a un email mais que ce celui ci n est pas valide alors on récupère quand même la valeur qui a été entrer mm si elle est fause -->
+                </div>
+                <div class="form-group">
+                  <label for="password">Mot de passe</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                    placeholder="mot de passe"
+                    value="<%= typeof password != 'undefined' ? password : '' %>"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password2">Confirmez le mot de passe </label>
+                  <input
+                    type="password"
+                    id="password2"
+                    name="password2"
+                    class="form-control"
+                    placeholder="mot de passe"
+                    value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+                  />
+                </div>
+                <button type="submit" class="btn btn-secondary btn-block">
+                  Inscription
+                </button>
+              </form>
+              <p class="lead mt-4">
+                Compte déja existant ?
+                <a href="/users/connexion">Se connecter</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <footer class="w-100">
+      <div class="text-center bottom p-3">
+        <a class="text-white" href="https://gitlab.com/tiba.benzer"
+          ><p><strong>RATIBA BENZEROUALI</strong></p></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

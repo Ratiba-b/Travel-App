@@ -1,0 +1,84 @@
+body {
+  background: rgba(198, 238, 232, 0.185);
+}
+
+.background {
+  background: url("/static/img/beach.jpg");
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgb(173, 173, 173);
+  width: 100%;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+.jumbotron {
+  width: 70%;
+  box-shadow: 10px 10px 30px rgb(173, 173, 173);
+  margin-top: 80px;
+  margin-bottom: 100px;
+  background: rgba(255, 255, 255, 0.753);
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: rgb(54, 54, 54);
+}
+.container-fluid {
+  height: 200%;
+}
+
+.contact {
+  width: 70%;
+  margin-bottom: 50px;
+  box-shadow: 10px 10px 30px rgb(173, 173, 173);
+  background: white;
+  border-radius: 15px;
+}
+
+.display-6 {
+  margin-bottom: 50px;
+}
+.box {
+  margin-top: 2em;
+  background: rgba(204, 223, 224, 0.472);
+}
+
+.card {
+  text-align: center;
+  background: white;
+  color: rgb(54, 54, 54);
+}
+
+.btn {
+  font-weight: bold;
+}
+
+footer {
+  bottom: 0;
+
+  background: rgba(222, 224, 224, 0.753);
+  box-shadow: 5px 5px 10px rgb(173, 173, 173);
+}
+.bottom {
+  background: rgba(198, 201, 201, 0.534);
+  box-shadow: 20px 20px 40px rgb(173, 173, 173);
+}
+
+@media (min-width: 1224px) {
+  .background {
+    background-image: url("/static/img/maldivesgrand.jpg");
+  }
+}
+
+@media (min-width: 320px) {
+  footer {
+    bottom: 0;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}

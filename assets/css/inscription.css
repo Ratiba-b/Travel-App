@@ -1,0 +1,32 @@
+body {
+  background: rgba(198, 238, 232, 0.185);
+}
+
+legend {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 3rem;
+  color: rgb(49, 2, 9);
+}
+
+.card {
+  box-shadow: 1px 2px 10px black;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  background: rgba(222, 224, 224, 0.753);
+  box-shadow: 5px 5px 10px rgb(173, 173, 173);
+}
+.bottom {
+  background: rgba(198, 201, 201, 0.534);
+  box-shadow: 20px 20px 40px rgb(173, 173, 173);
+}
+
+@media (min-width: 320px) {
+  footer {
+    position: none;
+    bottom: 0;
+  }
+}

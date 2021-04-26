@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/minty/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/resultats.css" />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">Travel-App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./dashboard"
+                >Accueil
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../recherches">Vols</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./historique">Historique</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./todo">To-do list</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="jumbotron">
+          <h1>Ne perds rien...</h1>
+          <p class="lead">
+            Choisi les vols que tu préferes pour les sauvegarder dans ton
+            historique perso 🤙 !
+          </p>
+          <hr class="my-4" />
+          <h2>
+            Tu pourras avoir une idée du prix, ce qui t'aideras pour calculer
+            ton budget 😉
+          </h2>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="card mb-3">
+            <div class="card-header">
+              <h5 class="font-weight-bold text-center py-2 mb-0">
+                Résultats de la recherche :
+              </h5>
+            </div>
+            <div class="card-body">
+              <fieldset class="form-group">
+                <div class="form-check text-align-center">
+                  <!-- <label class="form-check-label"> -->
+                  <% if(datas.length> 0) { %>
+                  <ul>
+                    <% for(let i=0; i < datas.length; i++) { %>
+                    <form action="/historique" method="post">
+                      <input
+                        type="hidden"
+                        name="departure"
+                        value="<%= datas[i].departure %>"
+                      />
+                      <input
+                        type="hidden"
+                        name="departureDate"
+                        value="<%= datas[i].departureDate %>"
+                      />
+                      <input
+                        type="hidden"
+                        name="arrival"
+                        value="<%= datas[i].arrival %>"
+                      />
+                      <input
+                        type="hidden"
+                        name="arrivalDate"
+                        value="<%= datas[i].arrivalDate %>"
+                      />
+                      <input
+                        type="hidden"
+                        name="finalPrice"
+                        value="<%= datas[i].finalPrice %>"
+                      />
+                      <input
+                        type="hidden"
+                        name="currency"
+                        value="<%= datas[i].currency %>"
+                      />
+                      <input
+                        type="hidden"
+                        name="aircraft"
+                        value="<%= datas[i].aircraft %>"
+                      />
+                      <input
+                        type="hidden"
+                        name="carrier"
+                        value="<%= datas[i].carrier%>"
+                      />
+                      <div class="row d-flex justify-content-between">
+                        <li>
+                          <strong> <%= datas[i].departure %></strong>
+                          <strong> <%= datas[i].arrival %></strong><br />
+                          <strong> <%= datas[i].finalPrice %> </strong>
+                          <strong><%= datas[i].currency %></strong><br />
+                          <%= datas[i].aircraft %> <%= datas[i].carrier %>
+                        </li>
+                        <button
+                          type="submit"
+                          id="oneFlight"
+                          flight-choice="<%= JSON.stringify(datas[i]) %>"
+                          class="btn btn-primary btn-sm"
+                        >
+                          Sauvegarder
+                        </button>
+                      </div>
+                    </form>
+                    <% } %>
+                  </ul>
+
+                  <% } else { %>
+                  <h3 class="text-center">Pas de résulats</h3>
+                  <% } %>
+                  <!-- </label> -->
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="w-100">
+      <div class="text-center bottom p-3">
+        <a class="text-white" href="https://gitlab.com/tiba.benzer"
+          ><p><strong>© 2021 Copyright : RATIBA BENZEROUALI</strong></p></a
+        >
+      </div>
+    </footer>
+    <script type="text/javascript" src="../static/flight.js"></script>
+  </body>
+</html>

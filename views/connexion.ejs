@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/minty/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/connexion.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <table class="table table-hover">
+        <tr class="table-secondary">
+          <th scope="row">TRAVEL-APP</th>
+        </tr>
+      </table>
+    </header>
+    <div class="row mt-5">
+      <div class="col-md-4 m-auto">
+        <div class="card card-body">
+          <h1 class="text-center mb-3">
+            <i class="fas fa-sign-in-alt"></i> Connexion
+          </h1>
+          <%- include('./partials/messages') %>
+
+          <form action="/users/connexion" method="POST">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Mot de passe</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+                placeholder="mot de passe"
+              />
+            </div>
+            <button type="submit" class="btn btn-secondary btn-block">
+              se connecter
+            </button>
+          </form>
+          <p class="lead mt-4">
+            Pas de compte ? <a href="/users/inscription">S'inscrire</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="w-100">
+      <div class="text-center bottom p-3">
+        <a class="text-white" href="https://gitlab.com/tiba.benzer"
+          ><p><strong>© 2021 Copyright : RATIBA BENZEROUALI</strong></p></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

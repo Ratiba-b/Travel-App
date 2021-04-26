@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/minty/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/recherches.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">Travel-App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./dashboard"
+                >Accueil
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./recherches">Vols</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./historique">Historique</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./todo">To-do list</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="jumbotron pb-5">
+          <h1>Une envie d'évasion ?</h1>
+          <p class="lead">
+            Travel app est là pour t'aider à organiser ton prochain voyage !
+          </p>
+          <hr class="my-4" />
+          <h2>Laisse nous t'aider 😊</h2>
+        </div>
+      </div>
+      <%- include('./partials/messages') %>
+      <div class="container">
+        <fieldset>
+          <legend>Trouves ta prochaine destination 🛫✈</legend>
+          <div class="row justify-content-center">
+            <div class="">
+              <div class="card card-body">
+                <form
+                  id="contact-form"
+                  method="POST"
+                  action="/recherches/resultats"
+                >
+                  <div class="form-group">
+                    <label for="locationDeparture">Ville de départ </label>
+                    <select
+                      class="form-control"
+                      id="exampleSelect1"
+                      name="locationDeparture"
+                    >
+                      <option value="">--Selectionnez une ville--</option>
+                      <% for(let i=0; i < airports.length; i++) { %>
+                      <option value="<%= airports[i].iata %>">
+                        <%= airports[i].city %> - <%= airports[i].name %>
+                      </option>
+                      <% } %>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="locationArrival">destination </label>
+                    <select
+                      class="form-control"
+                      id="exampleSelect1"
+                      name="locationArrival"
+                    >
+                      <option value="">--Selectionnez une ville--</option>
+                      <% for(let i=0; i < airports.length; i++) { %>
+                      <option value="<%= airports[i].iata %>">
+                        <%= airports[i].city %> - <%= airports[i].name %>
+                      </option>
+                      <% } %>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label" for="departure"
+                      >date du départ</label
+                    >
+                    <input
+                      type="date"
+                      name="departure"
+                      class="form-control"
+                      placeholder="Default input"
+                      id="inputDefault"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label" for="arrival"
+                      >date d'arrivée</label
+                    >
+                    <input
+                      type="date"
+                      name="arrival"
+                      class="form-control"
+                      placeholder="Default input"
+                      id="inputDefault"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Rechercher
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <footer class="w-100">
+      <div class="text-center bottom p-3">
+        <a class="text-white" href="https://gitlab.com/tiba.benzer"
+          ><p><strong>© 2021 Copyright : RATIBA BENZEROUALI</strong></p></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
