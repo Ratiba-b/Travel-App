@@ -7,6 +7,7 @@ const cookieSession = require("cookie-session");
 const passport = require("passport");
 const { bienConnecte } = require("./config/auth");
 const morgan = require("morgan");
+require("dotenv").config;
 
 //appeler le fichier passport
 require("./config/passport")(passport);
@@ -60,4 +61,4 @@ app.use("/historique", require("./routes/historique"));
 
 app.use(morgan("dev"));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
