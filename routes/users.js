@@ -5,6 +5,7 @@ const passport = require("passport");
 
 // modele pour insere ds BDD
 const User = require("../models/userModel");
+
 router.get("/connexion", function (req, res) {
   res.render("connexion");
 });
@@ -99,10 +100,10 @@ router.post("/connexion", function (req, res, next) {
 
 //deconnexion
 
-router.get("/deconnexion", function (req, res) {
+router.post("/deconnexion", function (req, res) {
   req.logout();
   req.flash("success_msg", "Vous êtes bien déconnecté");
-  res.redirect("/users/connexion");
+  res.redirect("/");
 });
 
 module.exports = router;

@@ -55,9 +55,9 @@ app.use(express.json());
 
 app.use("/", require("./routes/index")); // page accueil
 app.use("/users", require("./routes/users")); // inscription login et logout
-app.use("/recherches", require("./routes/resultats"));
+app.use("/recherches", bienConnecte, require("./routes/resultats"));
 app.use("/todo", bienConnecte, require("./routes/todo"));
-app.use("/historique", require("./routes/historique"));
+app.use("/historique", bienConnecte, require("./routes/historique"));
 
 app.use(morgan("dev"));
 
