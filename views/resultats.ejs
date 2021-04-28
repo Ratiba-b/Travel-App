@@ -133,10 +133,19 @@
                       />
                       <div class="row d-flex justify-content-between">
                         <li>
-                          <strong> <%= datas[i].departure %></strong>
-                          <strong> <%= datas[i].arrival %></strong><br />
-                          <strong> <%= datas[i].finalPrice %> </strong>
-                          <strong><%= datas[i].currency %></strong><br />
+                          <strong>
+                            <%= datas[i].departure %> - <%=
+                            datas[i].departureDate.toLocaleString("fr-FR") %> </strong
+                          ><br />
+                          <strong>
+                            <%= datas[i].arrival %> - <%=
+                            datas[i].arrivalDate.toLocaleString("fr-FR")
+                            %></strong
+                          ><br />
+                          <strong>
+                            <%= datas[i].finalPrice %><%= datas[i].currency
+                            %></strong
+                          ><br />
                           <%= datas[i].aircraft %> <%= datas[i].carrier %>
                         </li>
                         <button

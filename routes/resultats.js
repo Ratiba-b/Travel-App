@@ -3,6 +3,7 @@ const router = express.Router();
 const { bienConnecte } = require("../config/auth");
 const Amadeus = require("amadeus");
 const { airportList } = require("../config/airports");
+const { fakeFlights } = require("../config/fakeAmadeus");
 
 require("dotenv").config();
 
@@ -25,15 +26,16 @@ router.post("/resultats", async function (req, res) {
   locationDeparture = req.body.locationDeparture;
   locationArrival = req.body.locationArrival;
 
-  const amadeusResponse = await amadeus.shopping.flightOffersSearch
-    .get({
-      originLocationCode: locationDeparture,
-      destinationLocationCode: locationArrival,
-      departureDate: departure,
-      adults: "1",
-    })
-    .catch((err) => console.log(err));
+  // const amadeusResponse = await amadeus.shopping.flightOffersSearch
+  //   .get({
+  //     originLocationCode: locationDeparture,
+  //     destinationLocationCode: locationArrival,
+  //     departureDate: departure,
+  //     adults: "1",
+  //   })
+  // .catch((err) => console.log(err));
 
+  const amadeusResponse = fakeFlights();
   let apiResult = []; // va stocker les données à renvoyer au client
   //console.log(JSON.parse(amadeusResponse.body).data);
 
