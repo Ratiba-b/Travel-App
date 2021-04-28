@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    />
     <link
       rel="stylesheet"
       href="https://bootswatch.com/4/minty/bootstrap.min.css"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -18,11 +22,11 @@
   </head>
 
   <body>
-    <table class="table table-hover">
-      <tr class="table-secondary">
-        <th scope="row">TRAVEL-APP</th>
-      </tr>
-    </table>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+        <a class="navbar-brand">Travel-App</a>
+      </nav>
+    </header>
     <div class="container-fluid">
       <section class="background mb-5">
         <div class="row justify-content-center">
@@ -34,8 +38,8 @@
             </p>
             <hr class="my-4" />
             <p>
-              Check les vols, créer ta propore todo liste et encore bien des
-              choses pourront bientôt être possible sur Travel-App.
+              Check les vols, créer ta propore todo liste... et bien des choses
+              pourront bientôt être possible avec Travel-App.
             </p>
           </div>
         </div>
@@ -49,6 +53,8 @@
                   <h4 class="card-title">Rejoins-nous</h4>
                   <h1><i class="far fa-paper-plane fa-2x"></i></h1>
                   <p>Crée un nouveau compte ou connecte-toi</p>
+                  <%- include('./partials/messages') %>
+
                   <a
                     href="/users/inscription"
                     class="btn btn-primary btn-block mb-2"

@@ -22,7 +22,7 @@ module.exports = function (passport) {
             if (err) throw err;
 
             if (isMatch) {
-              return done(null, user); // null pour l'erreur mais user existant
+              return done(null, user); // null pour l'erreur cad pas d'erreur donc le mais existe
             } else {
               return done(null, false, { message: "mot de passe incorrect !" });
             }
@@ -32,6 +32,7 @@ module.exports = function (passport) {
     })
   );
 
+  // gestion des sessions avec les cookies
   passport.serializeUser(function (user, done) {
     done(null, user.id);
   });

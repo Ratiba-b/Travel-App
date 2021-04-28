@@ -27,7 +27,7 @@ footer {
 
 footer {
   bottom: 0;
-
+  position: fixed;
   background: rgba(222, 224, 224, 0.753);
   box-shadow: 5px 5px 10px rgb(173, 173, 173);
 }

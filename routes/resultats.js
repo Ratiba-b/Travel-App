@@ -3,8 +3,6 @@ const router = express.Router();
 const { bienConnecte } = require("../config/auth");
 const Amadeus = require("amadeus");
 const { airportList } = require("../config/airports");
-const mongoose = require("mongoose");
-const Vols = require("../models/volsModel");
 
 require("dotenv").config();
 

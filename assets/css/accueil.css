@@ -4,7 +4,7 @@ body {
 
 .background {
   background: url("/static/img/beach.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   border-radius: 10px;
   box-shadow: 10px 10px 30px rgb(173, 173, 173);
   width: 100%;

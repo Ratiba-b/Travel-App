@@ -18,12 +18,11 @@
   </head>
   <body>
     <header>
-      <table class="table table-hover">
-        <tr class="table-secondary">
-          <th scope="row">TRAVEL-APP</th>
-        </tr>
-      </table>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+        <a href="/" class="navbar-brand">Travel-App</a>
+      </nav>
     </header>
+
     <div class="container-fluid">
       <fieldset>
         <legend>Page d'inscription</legend>
@@ -42,7 +41,7 @@
                     id="name"
                     name="name"
                     class="form-control"
-                    placeholder="Enter Name"
+                    placeholder="Entre un prénom"
                     value="<%= typeof name != 'undefined' ? name : '' %>"
                   />
                   <!-- si le contenu n'est pas différent de undifined alors je veux qd mm recup ce qui a dans la variable, du moment que ce n'est pas undifined alors on recup la valeur-->
@@ -54,7 +53,7 @@
                     id="email"
                     name="email"
                     class="form-control"
-                    placeholder="Enter Email"
+                    placeholder="Entre un email"
                     value="<%= typeof email != 'undefined' ? email : '' %>"
                   />
                   <!-- si il y a un email mais que ce celui ci n est pas valide alors on récupère quand même la valeur qui a été entrer mm si elle est fause -->

@@ -68,7 +68,7 @@ router.post("/inscription", function (req, res) {
         bcrypt.genSalt(10, (err, salt) =>
           bcrypt.hash(newUser.password, salt, (err, hash) => {
             if (err) throw err;
-            // mdr crypté
+            // mdp crypté
             newUser.password = hash; // mtn le mot de passe n'est plus un text mais il est hashé
             newUser
               .save()
@@ -76,7 +76,7 @@ router.post("/inscription", function (req, res) {
                 // ce qui est re transmit au user
                 req.flash(
                   "success_msg",
-                  "Vous êtes bien enregistré vous pouvez vous connecter !"
+                  "Bravo ! tu es bien inscrit(e) Tu peux te connecter."
                 ); // flash est liée a une session elle affiche un message lié a une session après avoir été re dirigé vers la page de co
                 res.redirect("/users/connexion");
               })
@@ -102,7 +102,7 @@ router.post("/connexion", function (req, res, next) {
 
 router.post("/deconnexion", function (req, res) {
   req.logout();
-  req.flash("success_msg", "Vous êtes bien déconnecté");
+  req.flash("success_msg", "Tu es bien déconnecté. A bientôt !");
   res.redirect("/");
 });
 
