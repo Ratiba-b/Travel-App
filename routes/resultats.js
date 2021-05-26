@@ -26,18 +26,18 @@ router.post("/resultats", async function (req, res) {
   locationDeparture = req.body.locationDeparture;
   locationArrival = req.body.locationArrival;
 
-  // const amadeusResponse = await amadeus.shopping.flightOffersSearch
-  //   .get({
-  //     originLocationCode: locationDeparture,
-  //     destinationLocationCode: locationArrival,
-  //     departureDate: departure,
-  //     adults: "1",
-  //   })
-  // .catch((err) => console.log(err));
+  const amadeusResponse = await amadeus.shopping.flightOffersSearch
+    .get({
+      originLocationCode: locationDeparture,
+      destinationLocationCode: locationArrival,
+      departureDate: departure,
+      adults: "1",
+    })
+    .catch((err) => console.log(err));
 
-  const amadeusResponse = fakeFlights();
+  // const amadeusResponse = fakeFlights();
   let apiResult = []; // va stocker les données à renvoyer au client
-  //console.log(JSON.parse(amadeusResponse.body).data);
+  console.log(JSON.parse(amadeusResponse.body).data);
 
   const body = JSON.parse(amadeusResponse.body); //transforme la rep d'amadeus en JSON
   if (body.data.length > 0) {
